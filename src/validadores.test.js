@@ -79,9 +79,3 @@ describe("formatearCuit", () => {
   });
 });
 
-
-export function formatearCuit(valor) {
-  if (!validarCuit(valor)) return null;
-  const s = String(valor).replace(/[-\s.]/g, "");
-  return `${s.slice(0, 2)}-${s.slice(2, 10)}-${s[10]}`;
-}
