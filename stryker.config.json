@@ -1,0 +1,6 @@
+{
+  "testRunner": "vitest",
+  "mutate": ["src/validadores.js"],
+  "reporters": ["clear-text", "progress", "html"],
+  "coverageAnalysis": "perTest"
+}
