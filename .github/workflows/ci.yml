@@ -17,3 +17,7 @@ jobs:
       - run: npm test -- --coverage
       - run: npx playwright install --with-deps chromium
       - run: npm run e2e
+      - uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
