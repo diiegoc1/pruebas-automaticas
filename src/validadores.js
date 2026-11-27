@@ -6,7 +6,7 @@ export function validarCuit(valor) {
   if (!/^\d{11}$/.test(s)) return false;
   if (!TIPOS.includes(s.slice(0, 2))) return false;
   const suma = PESOS.reduce((total, peso, i) => total + peso * Number(s[i]), 0);
-  let verificador = 10 - (suma % 11);
+  let verificador = 11 - (suma % 11);
   if (verificador === 11) verificador = 0;
   if (verificador === 10) return false;
   return verificador === Number(s[10]);
